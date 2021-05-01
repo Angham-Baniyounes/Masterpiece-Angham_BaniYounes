@@ -1,0 +1,118 @@
+* {
+    font-size: 1.2rem;
+}
+
+.accordion-menu li a {
+    font-size: 1.15rem;
+    font-weight: normal;
+}
+.adminForm,
+.categoryForm,
+.subForm,
+.galleryForm {
+    display: flex;
+    justify-content: center;
+}
+.adminForm .card,
+.categoryForm .card,
+.subForm .card,
+.galleryForm .card {
+    width: 70%;
+}
+
+.adminDetails,
+.categoryDetails,
+.subcategoryDetails,
+.productDetails,
+.userDetails {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin-bottom: 2rem;
+}
+.adminDetails .card,
+.categoryDetails .card,
+.subcategoryDetails .card,
+.productDetails .card,
+.userDetails .card {
+    width: 70%;
+}
+.galleryForm {
+    margin-bottom: 2rem;
+}
+.list-profile {
+    margin-top: 2rem;
+}
+.adminDetails .card .card-body .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list-profile > li {
+    padding-top: 2rem;
+}
+.list-profile li i {
+    top: 30px !important;
+}
+.list-gallery > li {
+    padding-top: 0;
+    padding-right: 1rem;
+}
+.page-footer {
+    padding: 25px 42px 35px;
+    display: block;
+    clear: both;
+    margin-top: 3rem !important;
+}
+.div-body {
+    margin: auto;
+}
+.gallery {
+    margin: auto;
+    display: contents;
+}
+.thumb {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 1px 6px 0 rgb(27 25 25 / 34%);
+    margin-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 75%;
+}
+.thumb-img {
+    border-radius: 2px;
+    overflow: hidden;
+    width: 100%;
+}
+.gal-detail h4 {
+    margin: 16px auto 10px auto;
+    width: 80%;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gal-detail .ga-border {
+    height: 3px;
+    width: 60%;
+    background-color: #5e606e;
+    margin: 10px auto;
+}
+
+.actionbtns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 1.25rem;
+}
+.actionbtns div .btn{
+    display: flex;
+    align-items: center;
+    padding: 6px 8px !important;
+}
+.actionbtns i{
+    font-size: 1.75rem;
+}
