@@ -116,3 +116,13 @@
 .actionbtns i{
     font-size: 1.75rem;
 }
+
+.auth-page.sign-in {
+    background: url(../images/bg-login.jpg) center center no-repeat !important;
+    background-size: cover !important;
+}
+
+.error-page.error-404 .error-page-image {
+    background: url(../images/404_green.svg) center center no-repeat;
+    background-size: 100% 70%;
+}

@@ -2224,7 +2224,7 @@ tr.group {
     margin-bottom: 20px;
 }
 .error-page.error-404 .error-page-image {
-    background: url(../images/404.svg) center center no-repeat;
+    background: url(../images/404_green.svg) center center no-repeat;
     background-size: 100% 70%;
 }
 .error-page.error-500 .error-page-image {
@@ -2251,7 +2251,7 @@ tr.group {
     height: 100%;
 }
 .auth-page.sign-in .auth-image {
-    background: url(../images/login.svg) center center no-repeat;
+    background: url(../images/login_green.jpg) center center no-repeat;
     background-size: 90% 70%;
 }
 .auth-page .logo-box {

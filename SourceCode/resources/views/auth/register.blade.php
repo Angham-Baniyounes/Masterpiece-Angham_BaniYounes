@@ -3,15 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
+                <div class="card-header" style="background-color: green; color: #fff; font-size: 1.25rem">{{ __('Register') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                        <div class="form-group row  justify-content-center">
+                            <label for="name" class="col-md-4 col-form-label text-md-left">{{ __('Name') }}</label>
                             <div class="col-md-6">
                                 <input 
                                     id="name" 
@@ -32,8 +31,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                        <div class="form-group row  justify-content-center">
+                            <label for="email" class="col-md-4 col-form-label text-md-left">{{ __('E-Mail Address') }}</label>
                             <div class="col-md-6">
                                 <input 
                                     id="email" 
@@ -53,8 +52,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="user_mobile" class="col-md-4 col-form-label text-md-right">{{ __('Mobile Number') }}</label>
+                        <div class="form-group row  justify-content-center">
+                            <label for="user_mobile" class="col-md-4 col-form-label text-md-left">{{ __('Mobile Number') }}</label>
                             <div class="col-md-6">
                                 <input 
                                     id="user_mobile" 
@@ -74,8 +73,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="user_address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
+                        <div class="form-group row  justify-content-center">
+                            <label for="user_address" class="col-md-4 col-form-label text-md-left">{{ __('Address') }}</label>
                             <div class="col-md-6">
                                 <input 
                                     id="user_address" 
@@ -95,8 +94,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        <div class="form-group row  justify-content-center">
+                            <label for="password" class="col-md-4 col-form-label text-md-left">{{ __('Password') }}</label>
                             <div class="col-md-6">
                                 <input 
                                     id="password" 
@@ -115,8 +114,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                        <div class="form-group row  justify-content-center">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-left">{{ __('Confirm Password') }}</label>
                             <div class="col-md-6">
                                 <input 
                                     id="password-confirm" 
@@ -129,9 +128,9 @@
                                 >
                             </div>
                         </div>
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-success" >
+                        <div class="form-group row mb-0  justify-content-center d-flex">
+                            <div class="col-md-12 col-lg-12  pt-3">
+                                <button type="submit" class="btn btn-success" style="background-color: green; width:100%; font-size:18px;" >
                                     {{ __('Register') }}
                                 </button>
                             </div>

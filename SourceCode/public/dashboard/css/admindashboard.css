@@ -659,9 +659,10 @@ table.dataTable thead th {
     background-size: 100% 70%;
 }
 
-.auth-page.sign-in .auth-image {
-    background: url(../images/login_purple.svg) center center no-repeat;
-    background-size: 90% 70%;
+.auth-page.sign-in {
+    /* background: url(../das/images/bg-login.jpg) center center no-repeat; */
+    background: url(../images/bg-login.jpg) center center no-repeat !important;
+    background-size: cover !important;
 }
 
 .error-page-text h3 {
