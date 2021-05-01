@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-5" style="font-family: Balsamiq Sans', cursive !important;">
     <div class="row justify-content-center">
         <div class="col-md-7">
             <div class="card">
-                <div class="card-header" style="background-color: green; color: #fff; font-size: 1.25rem">{{ __('Register') }}</div>
+                <div class="card-header" style="font-size:18px; color:rgb(35, 169, 35)">{{ __('Register') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -130,7 +130,7 @@
                         </div>
                         <div class="form-group row mb-0  justify-content-center d-flex">
                             <div class="col-md-12 col-lg-12  pt-3">
-                                <button type="submit" class="btn btn-success" style="background-color: green; width:100%; font-size:18px;" >
+                                <button type="submit" class="btn btn-success" style="background-color: rgb(35, 169, 35); width:100%; font-size:18px;" >
                                     {{ __('Register') }}
                                 </button>
                             </div>

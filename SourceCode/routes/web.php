@@ -73,5 +73,5 @@ Route::prefix('users')->group(function() {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('public.layout.public-side');
 });
