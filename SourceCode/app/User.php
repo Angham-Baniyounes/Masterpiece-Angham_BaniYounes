@@ -5,11 +5,13 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Nagy\LaravelRating\Traits\Rate\CanRate;
 
 class User extends Authenticatable
 {
     use Notifiable;
-
+    use CanRate;
+    
     protected $fillable = [
         'name', 
         'email', 

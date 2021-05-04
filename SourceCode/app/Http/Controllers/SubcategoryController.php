@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\File;
 
 class SubcategoryController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth:admin');
+    }
+    
     public function index() {
         $subcategories = Subcategory::with('category')->paginate();
         return view('dashboard.subcategories.index', compact('subcategories'));
@@ -22,7 +26,7 @@ class SubcategoryController extends Controller
 
     public function store() {
         Subcategory::create($this->validateData());
-        return redirect(route('subcategory.view'))->with('msg', 'Subcategory created successfully.');
+        return redirect(route('subcategories.index'))->with('msg', 'Subcategory created successfully.');
     }
 
     public function show(Subcategory $subcategory) {

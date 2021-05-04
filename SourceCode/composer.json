@@ -15,7 +15,9 @@
         "laravel/framework": "^7.0",
         "laravel/socialite": "^5.2",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.4"
+        "laravel/ui": "^2.4",
+        "nagy/laravel-rating": "^2.2",
+        "nicolaslopezj/searchable": "^1.13"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -45,7 +47,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Acme\\controllers\\": "app/controllers"
         }
     },
     "minimum-stability": "dev",

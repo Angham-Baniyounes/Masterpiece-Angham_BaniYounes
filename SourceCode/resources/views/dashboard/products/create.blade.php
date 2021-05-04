@@ -66,7 +66,7 @@
                     <div class="form-group">
                         <label class="form-control-label text-uppercase">Discount</label>
                         <input 
-                            type="number" 
+                            type="text" 
                             name="product_discount" 
                             placeholder="Product Discount" 
                             class="form-control @error('product_discount')border-danger @enderror"

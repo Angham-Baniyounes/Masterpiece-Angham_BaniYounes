@@ -14,11 +14,21 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
+            // $table->id();
+            // $table->float('order_single_price');
+            // $table->integer('order_quantity');
+            // $table->string('payment_type');
+            // $table->float('total_price');
+            // $table->string('address');
+            // $table->string('status')->default('Processing');
+            // $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            // $table->timestamps();
+
             $table->id();
-            $table->float('order_single_price');
-            $table->integer('order_quantity');
-            $table->string('payment_type');
+            $table->bigInteger('total_quantity');
             $table->float('total_price');
+            $table->string('address');
+            $table->string('status')->default('Processing');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
@@ -27,6 +37,7 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->foreignId('order_id')->constrained('orders')->onDelete('cascade');
             $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
+            $table->integer('quantity');
             $table->timestamps();
             $table->unique(['order_id', 'product_id']);
         });

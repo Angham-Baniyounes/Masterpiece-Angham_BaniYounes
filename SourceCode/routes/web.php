@@ -1,5 +1,6 @@
 <?php
 
+use App\Feedback;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -33,14 +34,14 @@ Route::prefix('admin')->group(function() {
 
 Route::middleware('auth:admin')->group(function () {
     Route::resource('/categories', 'CategoryController');
-    Route::post('/search', 'CategoryController@search');
+    Route::post('categories/search', 'CategoryController@search');
 
     Route::resource('/subcategories', 'SubcategoryController');
-    Route::post('/search', 'SubcategoryController@search');
+    Route::post('subcategories/search', 'SubcategoryController@search');
     
     Route::name('')->group(function () {
         Route::resource('/products', 'ProductController');
-        Route::post('/search', 'ProductController@search');
+        Route::post('products/search', 'ProductController@search');
     });
     Route::prefix('/images')->group(function () {
         Route::get('/list', 'ProductImageController@index')->name('images.index');
@@ -62,6 +63,9 @@ Route::middleware('auth:admin')->group(function () {
         Route::patch('/{id}', 'ProductImageController@update');
     });
     Route::post('/gallery-product', 'ProductImageController@store');
+
+    Route::get('orders', 'OrderController@index');
+    Route::get('orders/{id}/{status}', 'OrderController@changeStatus');
 });
 
 
@@ -72,6 +76,26 @@ Route::prefix('users')->group(function() {
     Route::get('/{user}', 'UserController@show')->name('user.show');
 });
 
-Route::get('/', function () {
-    return view('public.layout.public-side');
+// Route::get('/', function () {
+//     return view('public.layout.public-side');
+// });
+// landing Page
+Route::get('/', 'LandingPageController@index');
+// Route::get('/shop', 'PageController@indexShop');
+Route::any('/shop', 'PageController@indexShop')->name('shop.index');
+Route::get('/single-product/{id}', 'PageController@showSingleProduct')->name('product.show');
+Route::get('/aboutus', 'PageController@showAboutUs');
+
+// Feedback
+Route::post('/feedback/{id}', 'FeedbackController@store')->name('feedback.store');
+
+Route::get('/cart', function () {
+    return view('public.cart');
 });
+
+Route::post('/addToCart', 'CartController@addToCart');
+Route::post('/update', 'CartController@update');
+Route::get('cart', 'CartController@index');
+Route::get('cart/delete/{id}', 'CartController@delete');
+Route::get('checkout', 'CartController@Checkout');
+Route::post('checkout', 'OrderController@store');

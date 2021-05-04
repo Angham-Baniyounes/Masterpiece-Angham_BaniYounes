@@ -19,7 +19,6 @@
                                     name="name" 
                                     value="{{ old('name') }}" 
                                     placeholder="John Doe"
-                                    required 
                                     autocomplete="name" 
                                     autofocus
                                 >
@@ -41,7 +40,6 @@
                                     name="email" 
                                     value="{{ old('email') }}" 
                                     placeholder="username@example.com"
-                                    required 
                                     autocomplete="email"
                                 >
                                 @error('email')
@@ -62,7 +60,6 @@
                                     name="user_mobile" 
                                     value="{{ old('user_mobile') }}" 
                                     placeholder="+962777777777"
-                                    required 
                                     autocomplete="mobile"
                                 >
                                 @error('mobile')
@@ -83,7 +80,6 @@
                                     name="user_address" 
                                     placeholder="Amman Albayader"
                                     value="{{ old('user_address') }}" 
-                                    required 
                                     autocomplete="address"
                                 >
                                 @error('user_address')
@@ -103,7 +99,6 @@
                                     class="form-control @error('password') is-invalid @enderror" 
                                     name="password" 
                                     placeholder="**********"
-                                    required 
                                     autocomplete="new-password"
                                 >
                                 @error('password')

@@ -9,10 +9,14 @@ use Illuminate\Support\Facades\File;
 // use DB;
 class ProductImageController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth:admin');
+    }
+    
     public function index()
     {
         // $productImages = ProductImage::paginate();
-        $productImages = ProductImage::with('product')->paginate(8);
+        $productImages=  Product::with('images')->paginate(10);
         $images = ProductImage::with('product')->get();
         return view('dashboard.products.index-images', 
         compact(

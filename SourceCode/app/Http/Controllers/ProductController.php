@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\File;
 
 class ProductController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth:admin');
+    }
+    
     public function index() {
         $products = Product::paginate();
         // $subcategories = Product::with('subcategory')->get();
@@ -57,7 +61,7 @@ class ProductController extends Controller
             'product_name'          => ['required', 'max:255'],
             'product_primary_image' => ['image', 'mimes: jpeg,png,jpg,gif,svg', 'max:2048'],
             'product_price'  => ['required', 'numeric', 'min:1', 'max:100'],
-            'product_discount'  => ['required', 'numeric', 'between:0.0,1.0'],
+            'product_discount'  => ['required', 'numeric', 'min:0', 'max:1'],
             'product_state'  => ['required', 'boolean'],
             'product_description'  => ['required', 'min:10', 'max:300'],
             'subcategory_id'  => ['exists:subcategories,id'],

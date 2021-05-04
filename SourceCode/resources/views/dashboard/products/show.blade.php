@@ -59,7 +59,7 @@
                                 <i class="material-icons-outlined">inventory_2</i>
                                 <span class="d-flex">
                                     <p class="font-weight-bold">Product Discount : &nbsp;&nbsp; </p>
-                                    <p class="text-dark">{{$product->product_discount}} %</p>
+                                    <p class="text-dark">{{$product->product_discount}} </p>
                                 </span>
                             </li>
                             <li>

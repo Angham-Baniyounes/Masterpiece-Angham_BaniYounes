@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProductImage extends Model
 {
     protected $table = "product_images";
-    protected $perPage = 2;
+    protected $perPage = 5;
     protected $guarded = [];
 
     public function product()
